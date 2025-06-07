@@ -1,0 +1,41 @@
+{
+  "name": "@neko0721/memory-bank-mcp",
+  "version": "1.0.0",
+  "keywords": [
+    "MCP",
+    "memory-bank",
+    "AI IDE",
+    "cursor",
+    "claude",
+    "ai assistant",
+    "project context",
+    "knowledge management"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoppo-chan/memory-bank-mcp"
+  },
+  "bin": {
+    "memory-bank-mcp": "build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "license": "MIT",
+  "author": "Memory Bank MCP Contributors",
+  "description": "A guided Memory Bank MCP plugin for AI-assisted development with persistent project context",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.5.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "typescript": "^5.7.3"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "start": "node build/index.js",
+    "dev": "tsx src/index.ts"
+  }
+}
