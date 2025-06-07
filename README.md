@@ -147,7 +147,7 @@ Add to Settings → Rules → User Rules:
 ```
 Before starting any task, check if memory-bank directory exists in the project. If not, run the MCP command init-memory-bank.
 Use the MCP command get-memory-bank-info to read Memory Bank content at session start.
-After completing tasks or conversations, use the MCP command update-memory-bank to update Memory Bank content.
+After completing tasks or conversations, you must use the MCP command update-memory-bank to update Memory Bank content.
 Follow the MCP guidance to maintain Memory Bank files.
 ```
 
@@ -158,7 +158,7 @@ Add to Settings → Cascade → Memories and Rules → Global Rules:
 ```
 Before starting any task, check if memory-bank directory exists in the project. If not, run the MCP command init-memory-bank.
 Use the MCP command get-memory-bank-info to read Memory Bank content at session start.
-After completing tasks or conversations, use the MCP command update-memory-bank to update Memory Bank content.
+After completing tasks or conversations, you must use the MCP command update-memory-bank to update Memory Bank content.
 Follow the MCP guidance to maintain Memory Bank files.
 ```
 

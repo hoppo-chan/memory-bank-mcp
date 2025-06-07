@@ -147,7 +147,7 @@ Memory Bank MCP 是一个基于模型上下文协议（MCP）的插件，通过�
 ```
 在开始任何任务之前，检查项目中是否存在 memory-bank 目录,如果没有则运行mcp命令init-memory-bank。
 在会话开始时使用mcp命令 get-memory-bank-info 读取 Memory Bank 内容。
-完成任务或对话后，使用mcp命令 update-memory-bank 更新 Memory Bank 内容。
+完成任务或对话后，你必须使用mcp命令 update-memory-bank 更新 Memory Bank 内容。
 遵循mcp指导来维护 Memory Bank 文件。
 ```
 
@@ -158,7 +158,7 @@ Memory Bank MCP 是一个基于模型上下文协议（MCP）的插件，通过�
 ```
 在开始任何任务之前，检查项目中是否存在 memory-bank 目录,如果没有则运行mcp命令init-memory-bank。
 在会话开始时使用mcp命令 get-memory-bank-info 读取 Memory Bank 内容。
-完成任务或对话后，使用mcp命令 update-memory-bank 更新 Memory Bank 内容。
+完成任务或对话后，你必须使用mcp命令 update-memory-bank 更新 Memory Bank 内容。
 遵循mcp指导来维护 Memory Bank 文件。
 ```
 
