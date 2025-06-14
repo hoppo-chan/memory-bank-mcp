@@ -20,10 +20,27 @@ function formatTimestamp(): string {
 
 // Path normalization function
 function normalizePath(inputPath: string): string {
-  // Normalize path, handle path separators for different operating systems
-  let normalized = path.normalize(inputPath);
+  let processedPath = inputPath;
 
-  // Remove trailing path separator if present
+  // 检测是否包含URL编码模式
+  if (/%[0-9A-Fa-f]{2}/.test(inputPath)) {
+    try {
+      processedPath = decodeURIComponent(inputPath);
+    } catch (error) {
+      console.warn(`Failed to decode URL path: ${inputPath}`, error);
+      // 解码失败时使用原始路径
+    }
+  }
+
+  // 处理Windows盘符路径：移除前导斜杠（如 /d: -> d:）
+  if (/^\/[a-zA-Z]:/.test(processedPath)) {
+    processedPath = processedPath.substring(1);
+  }
+
+  // 执行标准路径规范化
+  let normalized = path.normalize(processedPath);
+
+  // 移除尾部路径分隔符
   if (normalized.endsWith(path.sep)) {
     normalized = normalized.slice(0, -1);
   }
